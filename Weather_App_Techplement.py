@@ -1,5 +1,5 @@
 import requests
-
+#SANKET SONAR
 def get_weather(city_name, api_key):
     url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city_name}"
     response = requests.get(url)
@@ -11,7 +11,7 @@ def get_weather(city_name, api_key):
         humidity = data['current']['humidity']
         wind_speed = data['current']['wind_kph']
 
-        # Define emojis for different weather conditions
+        
         emoji = {
             "Sunny": "☀️",
             "Partly cloudy": "⛅",
@@ -63,7 +63,7 @@ def get_weather(city_name, api_key):
             "Moderate or heavy snow with thunder": "🌩️🌨️"
         }
 
-        # Get emoji for weather description
+       
         weather_emoji = emoji.get(weather_description, "")
 
         print(f"Weather in {city_name}: {weather_emoji}")
@@ -74,7 +74,7 @@ def get_weather(city_name, api_key):
     else:
         print("Failed to retrieve weather data.")
 
-# Replace 'YOUR_API_KEY' with your actual WeatherAPI.com API key
+
 api_key = 'c024b81340bc498b8b9110443240704'
 
 city_name = input("Enter the city name: ")
