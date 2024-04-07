@@ -1,5 +1,5 @@
 import requests
-
+#SANKET SONAR
 def get_weather(city_name, api_key):
     url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city_name}"
     response = requests.get(url)
